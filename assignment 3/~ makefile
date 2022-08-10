@@ -1,0 +1,11 @@
+TARGET=tcpclient tcpserver
+CC=gcc
+CFLAGS= -Wall -Wextra -g
+normal: $(TARGET)
+tcpclient: tcpclient.c
+        $(CC) $(CFLAGS) tcpclient.c  -o tcpclient.o
+tcpserver: tcpserver.c
+        $(CC) $(CFLAGS) tcpserver.c  -o tcpserver.o
+clean:  
+	$(RM) $(TARGET) tcpclient.o
+	$(RM) $(TARGET) tcpserver.o
