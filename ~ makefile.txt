@@ -1,8 +1,0 @@
-TARGET=client
-CC=gcc
-CFLAGS= -Wall -Wextra -g
-normal: $(TARGET)
-client: emclient.c
-	$(CC) $(CFLAGS) emclient.c -o emclient.o
-clean:
-	$(RM) $(TARGET) emclient.o
