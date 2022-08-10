@@ -1,0 +1,11 @@
+TARGET=UDP_Client UDP_Server
+CC=gcc
+CFLAGS= -Wall -Wextra -g
+normal: $(TARGET)
+UDP_Client: UDP_Client.c 
+	$(CC) $(CFLAGS) ufclient.c  -o ufclient.o
+UDP_Server: UDP_Server.c 
+	$(CC) $(CFLAGS) ufserver.c  -o ufserver.o
+clean:
+	$(RM) $(TARGET) uc.o
+	$(RM) $(TARGET) us.o
